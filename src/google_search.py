@@ -28,7 +28,6 @@ class GoogleSearch(Google):
         results = [bs.find_all("div", {"class": classname}) for classname in ["g", "ULSxyf", "hlcw0c"]]
 
         raw_decoded = raw_content.decode("utf-8", errors='ignore')
-        print(raw_decoded)
 
         for c in results:
             for result in c:
